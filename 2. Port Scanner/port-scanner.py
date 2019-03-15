@@ -8,12 +8,10 @@ from pyfiglet import Figlet
 from termcolor import cprint
 
 def print_output(result_set):
-    print "-"*60
-    print "Scanning the Host... Please wait..."
-    print "-"*60
+
     for port in result_set:
          print "Port {} : Open".format(port)
-    print "_"*60
+    print "_"*50
 
 
 def get_arguments():
@@ -26,6 +24,8 @@ def get_arguments():
 
 
 def scanHost(remoteHostIP):
+    print "Scanning the Host... Please wait..."
+    print "-"*50
     ports_list = []
     try:
         for p in range(1,1025):

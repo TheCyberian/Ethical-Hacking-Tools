@@ -3,6 +3,8 @@
 import subprocess
 from optparse import OptionParser
 import re
+from pyfiglet import Figlet
+from termcolor import cprint
 
 
 def change_mac_address(interface, new_mac_address):
@@ -30,6 +32,12 @@ def current_mac_lookup(interface):
     else:
         print("[-] Could not read MAC Address...")
 
+def print_banner(text):
+    print("-" * 68)
+    cprint(Figlet().renderText(text), 'red', attrs=['bold'])
+    print("-" * 68)
+
+print_banner("mac : changer")
 options = get_arguments()
 current_mac = current_mac_lookup(options.interface)
 print("[+] Current MAC = "+str(current_mac))

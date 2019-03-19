@@ -6,3 +6,6 @@ Set of Information Gathering tools, written in Python.
 
 2. Port Scanner
 <img src="2. Port Scanner/port-Scanner-banner.png" width="500" height="100"/>
+
+3. Network Scanner
+<img src="3. Network-Scanner/network-scanner-banner.png" width="450" height="100"/>
